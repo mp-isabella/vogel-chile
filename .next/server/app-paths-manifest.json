@@ -2,17 +2,17 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/icon.png/route": "app/icon.png/route.js",
   "/page": "app/page.js",
+  "/nosotros/page": "app/nosotros/page.js",
   "/blog/page": "app/blog/page.js",
   "/contacto/page": "app/contacto/page.js",
   "/proyectos/page": "app/proyectos/page.js",
   "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/servicios/abastecimiento/page": "app/servicios/abastecimiento/page.js",
   "/servicios/page": "app/servicios/page.js",
   "/proyectos/impulsaq/page": "app/proyectos/impulsaq/page.js",
-  "/proyectos/gestion-empresarial/page": "app/proyectos/gestion-empresarial/page.js",
-  "/nosotros/page": "app/nosotros/page.js",
-  "/servicios/abastecimiento/page": "app/servicios/abastecimiento/page.js",
   "/servicios/soluciones-tecnologicas/page": "app/servicios/soluciones-tecnologicas/page.js",
-  "/servicios/infraestructura/page": "app/servicios/infraestructura/page.js",
+  "/proyectos/gestion-empresarial/page": "app/proyectos/gestion-empresarial/page.js",
+  "/servicios/consultoria/page": "app/servicios/consultoria/page.js",
   "/servicios/mercado-publico/page": "app/servicios/mercado-publico/page.js",
-  "/servicios/consultoria/page": "app/servicios/consultoria/page.js"
+  "/servicios/infraestructura/page": "app/servicios/infraestructura/page.js"
 }
