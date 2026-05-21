@@ -24,15 +24,6 @@
       "static/chunks/860-8a9d433af3ddb43a.js",
       "static/chunks/app/page-29b28ff1d76a7ff4.js"
     ],
-    "/contacto/page": [
-      "static/chunks/webpack-2b8d823c930ea584.js",
-      "static/chunks/87c73c54-24122e7b92478d00.js",
-      "static/chunks/18-4ce5efc64451836b.js",
-      "static/chunks/main-app-239435bea2d37ed0.js",
-      "static/chunks/752-96002ef02f2cc212.js",
-      "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/contacto/page-f11cad7878131c3d.js"
-    ],
     "/blog/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
       "static/chunks/87c73c54-24122e7b92478d00.js",
@@ -42,23 +33,14 @@
       "static/chunks/860-8a9d433af3ddb43a.js",
       "static/chunks/app/blog/page-2bf40d9da1b06fac.js"
     ],
-    "/nosotros/page": [
+    "/contacto/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
       "static/chunks/87c73c54-24122e7b92478d00.js",
       "static/chunks/18-4ce5efc64451836b.js",
       "static/chunks/main-app-239435bea2d37ed0.js",
       "static/chunks/752-96002ef02f2cc212.js",
       "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/nosotros/page-9fe6fb78da3f2eeb.js"
-    ],
-    "/blog/[slug]/page": [
-      "static/chunks/webpack-2b8d823c930ea584.js",
-      "static/chunks/87c73c54-24122e7b92478d00.js",
-      "static/chunks/18-4ce5efc64451836b.js",
-      "static/chunks/main-app-239435bea2d37ed0.js",
-      "static/chunks/752-96002ef02f2cc212.js",
-      "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/blog/[slug]/page-93c0a3b725b8f780.js"
+      "static/chunks/app/contacto/page-f11cad7878131c3d.js"
     ],
     "/proyectos/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
@@ -69,59 +51,14 @@
       "static/chunks/860-8a9d433af3ddb43a.js",
       "static/chunks/app/proyectos/page-1369be918a1df8b9.js"
     ],
-    "/servicios/consultoria/page": [
+    "/blog/[slug]/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
       "static/chunks/87c73c54-24122e7b92478d00.js",
       "static/chunks/18-4ce5efc64451836b.js",
       "static/chunks/main-app-239435bea2d37ed0.js",
       "static/chunks/752-96002ef02f2cc212.js",
       "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/servicios/consultoria/page-76c231da683b747c.js"
-    ],
-    "/proyectos/impulsaq/page": [
-      "static/chunks/webpack-2b8d823c930ea584.js",
-      "static/chunks/87c73c54-24122e7b92478d00.js",
-      "static/chunks/18-4ce5efc64451836b.js",
-      "static/chunks/main-app-239435bea2d37ed0.js",
-      "static/chunks/752-96002ef02f2cc212.js",
-      "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/proyectos/impulsaq/page-76c231da683b747c.js"
-    ],
-    "/servicios/abastecimiento/page": [
-      "static/chunks/webpack-2b8d823c930ea584.js",
-      "static/chunks/87c73c54-24122e7b92478d00.js",
-      "static/chunks/18-4ce5efc64451836b.js",
-      "static/chunks/main-app-239435bea2d37ed0.js",
-      "static/chunks/752-96002ef02f2cc212.js",
-      "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/servicios/abastecimiento/page-76c231da683b747c.js"
-    ],
-    "/servicios/infraestructura/page": [
-      "static/chunks/webpack-2b8d823c930ea584.js",
-      "static/chunks/87c73c54-24122e7b92478d00.js",
-      "static/chunks/18-4ce5efc64451836b.js",
-      "static/chunks/main-app-239435bea2d37ed0.js",
-      "static/chunks/752-96002ef02f2cc212.js",
-      "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/servicios/infraestructura/page-76c231da683b747c.js"
-    ],
-    "/servicios/soluciones-tecnologicas/page": [
-      "static/chunks/webpack-2b8d823c930ea584.js",
-      "static/chunks/87c73c54-24122e7b92478d00.js",
-      "static/chunks/18-4ce5efc64451836b.js",
-      "static/chunks/main-app-239435bea2d37ed0.js",
-      "static/chunks/752-96002ef02f2cc212.js",
-      "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/servicios/soluciones-tecnologicas/page-76c231da683b747c.js"
-    ],
-    "/proyectos/gestion-empresarial/page": [
-      "static/chunks/webpack-2b8d823c930ea584.js",
-      "static/chunks/87c73c54-24122e7b92478d00.js",
-      "static/chunks/18-4ce5efc64451836b.js",
-      "static/chunks/main-app-239435bea2d37ed0.js",
-      "static/chunks/752-96002ef02f2cc212.js",
-      "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/proyectos/gestion-empresarial/page-76c231da683b747c.js"
+      "static/chunks/app/blog/[slug]/page-93c0a3b725b8f780.js"
     ],
     "/servicios/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
@@ -132,6 +69,60 @@
       "static/chunks/860-8a9d433af3ddb43a.js",
       "static/chunks/app/servicios/page-6685407469a993d2.js"
     ],
+    "/proyectos/impulsaq/page": [
+      "static/chunks/webpack-2b8d823c930ea584.js",
+      "static/chunks/87c73c54-24122e7b92478d00.js",
+      "static/chunks/18-4ce5efc64451836b.js",
+      "static/chunks/main-app-239435bea2d37ed0.js",
+      "static/chunks/752-96002ef02f2cc212.js",
+      "static/chunks/860-8a9d433af3ddb43a.js",
+      "static/chunks/app/proyectos/impulsaq/page-76c231da683b747c.js"
+    ],
+    "/proyectos/gestion-empresarial/page": [
+      "static/chunks/webpack-2b8d823c930ea584.js",
+      "static/chunks/87c73c54-24122e7b92478d00.js",
+      "static/chunks/18-4ce5efc64451836b.js",
+      "static/chunks/main-app-239435bea2d37ed0.js",
+      "static/chunks/752-96002ef02f2cc212.js",
+      "static/chunks/860-8a9d433af3ddb43a.js",
+      "static/chunks/app/proyectos/gestion-empresarial/page-76c231da683b747c.js"
+    ],
+    "/nosotros/page": [
+      "static/chunks/webpack-2b8d823c930ea584.js",
+      "static/chunks/87c73c54-24122e7b92478d00.js",
+      "static/chunks/18-4ce5efc64451836b.js",
+      "static/chunks/main-app-239435bea2d37ed0.js",
+      "static/chunks/752-96002ef02f2cc212.js",
+      "static/chunks/860-8a9d433af3ddb43a.js",
+      "static/chunks/app/nosotros/page-9fe6fb78da3f2eeb.js"
+    ],
+    "/servicios/abastecimiento/page": [
+      "static/chunks/webpack-2b8d823c930ea584.js",
+      "static/chunks/87c73c54-24122e7b92478d00.js",
+      "static/chunks/18-4ce5efc64451836b.js",
+      "static/chunks/main-app-239435bea2d37ed0.js",
+      "static/chunks/752-96002ef02f2cc212.js",
+      "static/chunks/860-8a9d433af3ddb43a.js",
+      "static/chunks/app/servicios/abastecimiento/page-76c231da683b747c.js"
+    ],
+    "/servicios/soluciones-tecnologicas/page": [
+      "static/chunks/webpack-2b8d823c930ea584.js",
+      "static/chunks/87c73c54-24122e7b92478d00.js",
+      "static/chunks/18-4ce5efc64451836b.js",
+      "static/chunks/main-app-239435bea2d37ed0.js",
+      "static/chunks/752-96002ef02f2cc212.js",
+      "static/chunks/860-8a9d433af3ddb43a.js",
+      "static/chunks/app/servicios/soluciones-tecnologicas/page-76c231da683b747c.js"
+    ],
+    "/servicios/infraestructura/page": [
+      "static/chunks/webpack-2b8d823c930ea584.js",
+      "static/chunks/87c73c54-24122e7b92478d00.js",
+      "static/chunks/18-4ce5efc64451836b.js",
+      "static/chunks/main-app-239435bea2d37ed0.js",
+      "static/chunks/752-96002ef02f2cc212.js",
+      "static/chunks/860-8a9d433af3ddb43a.js",
+      "static/chunks/app/servicios/infraestructura/page-76c231da683b747c.js"
+    ],
     "/servicios/mercado-publico/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
       "static/chunks/87c73c54-24122e7b92478d00.js",
@@ -140,6 +131,15 @@
       "static/chunks/752-96002ef02f2cc212.js",
       "static/chunks/860-8a9d433af3ddb43a.js",
       "static/chunks/app/servicios/mercado-publico/page-76c231da683b747c.js"
+    ],
+    "/servicios/consultoria/page": [
+      "static/chunks/webpack-2b8d823c930ea584.js",
+      "static/chunks/87c73c54-24122e7b92478d00.js",
+      "static/chunks/18-4ce5efc64451836b.js",
+      "static/chunks/main-app-239435bea2d37ed0.js",
+      "static/chunks/752-96002ef02f2cc212.js",
+      "static/chunks/860-8a9d433af3ddb43a.js",
+      "static/chunks/app/servicios/consultoria/page-76c231da683b747c.js"
     ]
   }
 }
