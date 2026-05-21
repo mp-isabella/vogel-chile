@@ -5,7 +5,7 @@ import { motion, type Variants } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, ChevronDown } from 'lucide-react'
-import { cn } from '@vogel/utils'
+import { cn } from '@/lib/utils'
 
 /* ─── Slide data ────────────────────────────────────────────────────────── */
 const SLIDES = [
@@ -26,7 +26,7 @@ const SLIDES = [
   },
   {
     src:      '/images/hero/portada_03.png',
-    position: 'center 50%',
+    position: 'center 45%',
     priority: false,
   },
 ] as const

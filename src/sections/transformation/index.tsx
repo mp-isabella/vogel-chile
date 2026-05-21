@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Server, Cloud, Lock, RefreshCw, Database, Cpu } from 'lucide-react'
 import { staggerSlow, fadeUp, inView } from '@/lib/motion'
 import { SectionHeader } from '@/components/ui/SectionHeader'
-import { cn } from '@vogel/utils'
+import { cn } from '@/lib/utils'
 import type { LucideIcon } from 'lucide-react'
 
 /* ─── Data — exactly 6 capabilities ────────────────────────────────────── */

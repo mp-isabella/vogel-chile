@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { cn } from '@vogel/utils'
+import { cn } from '@/lib/utils'
 import { stagger, fadeUp, inView } from '@/lib/motion'
 
 interface SectionHeaderProps {

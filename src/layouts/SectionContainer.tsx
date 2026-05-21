@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { cn } from '@vogel/utils'
+import { cn } from '@/lib/utils'
 
 interface SectionContainerProps {
   children: ReactNode

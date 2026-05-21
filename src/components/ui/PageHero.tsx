@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
-import { cn } from '@vogel/utils'
+import { cn } from '@/lib/utils'
 
 interface Breadcrumb {
   label: string

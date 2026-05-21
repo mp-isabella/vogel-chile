@@ -2,7 +2,7 @@
 
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect, useRef } from 'react'
-import { cn } from '@vogel/utils'
+import { cn } from '@/lib/utils'
 
 interface StatsCardProps {
   value: string

@@ -1,4 +1,4 @@
-import { cn } from '@vogel/utils'
+import { cn } from '@/lib/utils'
 import type { ReactNode } from 'react'
 
 interface GradientBadgeProps {

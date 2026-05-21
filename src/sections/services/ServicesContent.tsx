@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Cpu, Network, Headset, Package, Building2 } from 'lucide-react'
-import { cn } from '@vogel/utils'
+import { cn } from '@/lib/utils'
 import { fadeUp, fadeLeft, fadeRight, inView, staggerSlow } from '@/lib/motion'
 
 /* ─── Data ──────────────────────────────────────────────────────────────── */

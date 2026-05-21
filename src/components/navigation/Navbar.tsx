@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X, ChevronDown, Phone, ArrowRight } from 'lucide-react'
-import { cn } from '@vogel/utils'
+import { cn } from '@/lib/utils'
 import { useScrolled } from '@/hooks/useScrolled'
 import { NAV_ITEMS } from '@/constants/navigation'
 
