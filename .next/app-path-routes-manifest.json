@@ -9,10 +9,10 @@
   "/blog/[slug]/page": "/blog/[slug]",
   "/servicios/abastecimiento/page": "/servicios/abastecimiento",
   "/servicios/page": "/servicios",
-  "/proyectos/impulsaq/page": "/proyectos/impulsaq",
-  "/servicios/soluciones-tecnologicas/page": "/servicios/soluciones-tecnologicas",
-  "/proyectos/gestion-empresarial/page": "/proyectos/gestion-empresarial",
   "/servicios/consultoria/page": "/servicios/consultoria",
-  "/servicios/mercado-publico/page": "/servicios/mercado-publico",
-  "/servicios/infraestructura/page": "/servicios/infraestructura"
+  "/servicios/soluciones-tecnologicas/page": "/servicios/soluciones-tecnologicas",
+  "/servicios/infraestructura/page": "/servicios/infraestructura",
+  "/proyectos/gestion-empresarial/page": "/proyectos/gestion-empresarial",
+  "/proyectos/impulsaq/page": "/proyectos/impulsaq",
+  "/servicios/mercado-publico/page": "/servicios/mercado-publico"
 }

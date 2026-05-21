@@ -9,10 +9,10 @@
   "/blog/[slug]/page": "app/blog/[slug]/page.js",
   "/servicios/abastecimiento/page": "app/servicios/abastecimiento/page.js",
   "/servicios/page": "app/servicios/page.js",
-  "/proyectos/impulsaq/page": "app/proyectos/impulsaq/page.js",
-  "/servicios/soluciones-tecnologicas/page": "app/servicios/soluciones-tecnologicas/page.js",
-  "/proyectos/gestion-empresarial/page": "app/proyectos/gestion-empresarial/page.js",
   "/servicios/consultoria/page": "app/servicios/consultoria/page.js",
-  "/servicios/mercado-publico/page": "app/servicios/mercado-publico/page.js",
-  "/servicios/infraestructura/page": "app/servicios/infraestructura/page.js"
+  "/servicios/soluciones-tecnologicas/page": "app/servicios/soluciones-tecnologicas/page.js",
+  "/servicios/infraestructura/page": "app/servicios/infraestructura/page.js",
+  "/proyectos/gestion-empresarial/page": "app/proyectos/gestion-empresarial/page.js",
+  "/proyectos/impulsaq/page": "app/proyectos/impulsaq/page.js",
+  "/servicios/mercado-publico/page": "app/servicios/mercado-publico/page.js"
 }

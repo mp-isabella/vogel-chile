@@ -87,14 +87,14 @@
       "static/chunks/860-8a9d433af3ddb43a.js",
       "static/chunks/app/servicios/page-6685407469a993d2.js"
     ],
-    "/proyectos/impulsaq/page": [
+    "/servicios/consultoria/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
       "static/chunks/87c73c54-24122e7b92478d00.js",
       "static/chunks/18-4ce5efc64451836b.js",
       "static/chunks/main-app-239435bea2d37ed0.js",
       "static/chunks/752-96002ef02f2cc212.js",
       "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/proyectos/impulsaq/page-76c231da683b747c.js"
+      "static/chunks/app/servicios/consultoria/page-76c231da683b747c.js"
     ],
     "/servicios/soluciones-tecnologicas/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
@@ -105,6 +105,15 @@
       "static/chunks/860-8a9d433af3ddb43a.js",
       "static/chunks/app/servicios/soluciones-tecnologicas/page-76c231da683b747c.js"
     ],
+    "/servicios/infraestructura/page": [
+      "static/chunks/webpack-2b8d823c930ea584.js",
+      "static/chunks/87c73c54-24122e7b92478d00.js",
+      "static/chunks/18-4ce5efc64451836b.js",
+      "static/chunks/main-app-239435bea2d37ed0.js",
+      "static/chunks/752-96002ef02f2cc212.js",
+      "static/chunks/860-8a9d433af3ddb43a.js",
+      "static/chunks/app/servicios/infraestructura/page-76c231da683b747c.js"
+    ],
     "/proyectos/gestion-empresarial/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
       "static/chunks/87c73c54-24122e7b92478d00.js",
@@ -114,14 +123,14 @@
       "static/chunks/860-8a9d433af3ddb43a.js",
       "static/chunks/app/proyectos/gestion-empresarial/page-76c231da683b747c.js"
     ],
-    "/servicios/consultoria/page": [
+    "/proyectos/impulsaq/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
       "static/chunks/87c73c54-24122e7b92478d00.js",
       "static/chunks/18-4ce5efc64451836b.js",
       "static/chunks/main-app-239435bea2d37ed0.js",
       "static/chunks/752-96002ef02f2cc212.js",
       "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/servicios/consultoria/page-76c231da683b747c.js"
+      "static/chunks/app/proyectos/impulsaq/page-76c231da683b747c.js"
     ],
     "/servicios/mercado-publico/page": [
       "static/chunks/webpack-2b8d823c930ea584.js",
@@ -131,15 +140,6 @@
       "static/chunks/752-96002ef02f2cc212.js",
       "static/chunks/860-8a9d433af3ddb43a.js",
       "static/chunks/app/servicios/mercado-publico/page-76c231da683b747c.js"
-    ],
-    "/servicios/infraestructura/page": [
-      "static/chunks/webpack-2b8d823c930ea584.js",
-      "static/chunks/87c73c54-24122e7b92478d00.js",
-      "static/chunks/18-4ce5efc64451836b.js",
-      "static/chunks/main-app-239435bea2d37ed0.js",
-      "static/chunks/752-96002ef02f2cc212.js",
-      "static/chunks/860-8a9d433af3ddb43a.js",
-      "static/chunks/app/servicios/infraestructura/page-76c231da683b747c.js"
     ]
   }
 }
