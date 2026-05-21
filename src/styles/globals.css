@@ -1,0 +1,322 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── VOGEL Design Tokens ───────────────────────────────────────────────── */
+:root {
+  /* Brand */
+  --vogel-950: #070d1a;
+  --vogel-900: #0c1525;
+  --vogel-800: #101d33;
+  --vogel-700: #162444;
+  --vogel-600: #1c2e56;
+
+  /* Electric blue — primary interaction color */
+  --electric:       #0062FF;
+  --electric-hover: #004FD4;
+  --electric-light: #EEF3FF;
+  --electric-mid:   #DBEAFE;
+
+  /* Alias */
+  --accent:         var(--electric);
+  --accent-hover:   var(--electric-hover);
+
+  /* Light corporate surfaces */
+  --bg:         #ffffff;
+  --bg-soft:    #F8F9FB;
+  --bg-muted:   #EEF0F4;
+  --text:       #070d1a;
+  --text-body:  #374151;
+  --text-muted: #6B7280;
+  --text-light: #9CA3AF;
+  --border:     #E5E7EB;
+  --border-mid: #D1D5DB;
+
+  /* Navbar */
+  --nav-h: 76px;
+
+  /* Section spacing */
+  --s-y:    clamp(4rem, 7vw, 7rem);
+  --s-y-sm: clamp(3rem, 5vw, 5rem);
+
+  /* Container */
+  --max-w:  1280px;
+  --pad-x:  clamp(1.25rem, 4vw, 2.75rem);
+
+  /* Radius */
+  --r-sm: 0.375rem;
+  --r-md: 0.5rem;
+  --r-lg: 0.875rem;
+  --r-xl: 1.125rem;
+
+  /* Shadows */
+  --sh-sm:    0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+  --sh-md:    0 4px 8px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  --sh-lg:    0 10px 28px rgba(0,0,0,0.08), 0 3px 8px rgba(0,0,0,0.04);
+  --sh-xl:    0 20px 48px rgba(0,0,0,0.10), 0 6px 16px rgba(0,0,0,0.05);
+  --sh-nav:   0 1px 0 rgba(0,0,0,0.07), 0 2px 16px rgba(0,0,0,0.05);
+  --sh-blue:  0 8px 24px rgba(0,98,255,0.25);
+  --sh-float: 0 16px 40px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Override Tailwind preflight heading reset — restore font-size scaling */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: revert;
+    font-weight: 700;
+  }
+
+  img, video { display: block; max-width: 100%; }
+
+  ::selection {
+    background: rgba(0, 98, 255, 0.12);
+    color: var(--vogel-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--electric);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track  { background: var(--bg-soft); }
+  ::-webkit-scrollbar-thumb  { background: var(--border-mid); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--text-light); }
+}
+
+/* ─── Layout Components ─────────────────────────────────────────────────── */
+@layer components {
+
+  .container-vogel {
+    width: 100%;
+    max-width: var(--max-w);
+    margin-inline: auto;
+    padding-inline: var(--pad-x);
+  }
+
+  .section-py    { padding-block: var(--s-y); }
+  .section-py-sm { padding-block: var(--s-y-sm); }
+
+  /* ── Type atoms ─────────────────────────────────────────────────── */
+  .text-overline {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--electric);
+  }
+
+  /* These CSS classes mirror the Tailwind fontSize utilities
+     but are available for use in JSX className strings */
+  .text-display {
+    font-size: clamp(2.875rem, 6vw, 5.25rem);
+    font-weight: 700;
+    line-height: 1.03;
+    letter-spacing: -0.036em;
+  }
+
+  .text-headline {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  .text-title {
+    font-size: clamp(1.625rem, 2.5vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: -0.022em;
+  }
+
+  .text-subtitle {
+    font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.014em;
+  }
+
+  /* ── Enterprise tag ─────────────────────────────────────────────── */
+  .tag-enterprise {
+    display: inline-block;
+    border: 1px solid rgba(0, 98, 255, 0.22);
+    padding: 0.18rem 0.55rem;
+    font-size: 0.65rem;
+    font-family: var(--font-mono, monospace);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(0, 98, 255, 0.65);
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .tag-enterprise:hover {
+    border-color: rgba(0, 98, 255, 0.45);
+    color: #0062FF;
+  }
+
+  /* ── Dividers ───────────────────────────────────────────────────── */
+  .divider        { height: 1px; background: var(--border); }
+  .divider-accent { height: 2px; width: 2.75rem; background: var(--electric); border-radius: 2px; }
+
+  /* ── Buttons ────────────────────────────────────────────────────── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: var(--r-md);
+    padding: 0.75rem 1.75rem;
+    transition:
+      background-color 0.2s ease,
+      color            0.2s ease,
+      border-color     0.2s ease,
+      box-shadow       0.2s ease,
+      transform        0.15s ease;
+    -webkit-user-select: none;
+    user-select: none;
+    text-decoration: none;
+  }
+  .btn:active { transform: translateY(1px) scale(0.99); }
+
+  .btn-primary {
+    @apply btn;
+    background: var(--electric);
+    color: #fff;
+    border: 1.5px solid transparent;
+  }
+  .btn-primary:hover {
+    background: var(--electric-hover);
+    box-shadow: var(--sh-blue);
+  }
+
+  .btn-outline-white {
+    @apply btn;
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.52);
+  }
+  .btn-outline-white:hover {
+    background: rgba(255,255,255,0.10);
+    border-color: rgba(255,255,255,0.82);
+  }
+
+  .btn-outline-navy {
+    @apply btn;
+    background: transparent;
+    color: var(--vogel-700);
+    border: 1.5px solid var(--vogel-700);
+  }
+  .btn-outline-navy:hover {
+    background: var(--vogel-700);
+    color: #fff;
+  }
+
+  .btn-outline-electric {
+    @apply btn;
+    background: transparent;
+    color: var(--electric);
+    border: 1.5px solid var(--electric);
+  }
+  .btn-outline-electric:hover {
+    background: var(--electric);
+    color: #fff;
+    box-shadow: var(--sh-blue);
+  }
+
+  .btn-ghost {
+    @apply btn;
+    background: transparent;
+    color: var(--text-body);
+    border: 1.5px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: var(--bg-soft);
+    border-color: var(--border-mid);
+  }
+
+  /* ── Cards ──────────────────────────────────────────────────────── */
+  .card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    box-shadow: var(--sh-sm);
+    transition:
+      box-shadow   0.3s ease,
+      transform    0.3s ease,
+      border-color 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: var(--sh-lg);
+    transform: translateY(-3px);
+    border-color: rgba(0, 98, 255, 0.2);
+  }
+
+  /* ── Image zoom container ───────────────────────────────────────── */
+  .img-zoom {
+    overflow: hidden;
+    border-radius: var(--r-lg);
+    position: relative;
+  }
+  .img-zoom > img,
+  .img-zoom > span > img {
+    transition: transform 0.7s ease;
+    will-change: transform;
+  }
+  .img-zoom:hover > img,
+  .img-zoom:hover > span > img {
+    transform: scale(1.045);
+  }
+
+  /* ── Gradient text ──────────────────────────────────────────────── */
+  .gradient-text {
+    background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-blue {
+    background: linear-gradient(135deg, #0062FF 0%, #60A5FA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Electric blue → deep navy — corporate heading gradient */
+  .gradient-text-navy {
+    background: linear-gradient(135deg, #0062FF 0%, #0c1525 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
