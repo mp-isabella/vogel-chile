@@ -4,7 +4,7 @@ import { useRef, useState, useCallback, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, ArrowLeft, Cpu, Network, Headset, Package, Building2 } from 'lucide-react'
+import { ArrowRight, ArrowLeft, Cpu, Truck, Headset, Package, Landmark } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { fadeUp, inView } from '@/lib/motion'
 import { SectionHeader } from '@/components/ui/SectionHeader'
@@ -21,49 +21,58 @@ const SERVICES: {
   href:      string
 }[] = [
   {
-    icon:     Cpu,
-    category: 'Software & Plataformas',
-    title:    'Soluciones Tecnológicas',
-    body:     'Plataformas digitales a medida diseñadas para adaptarse a los procesos únicos de su organización, con integración nativa a sistemas existentes.',
-    image:    '/images/services/servicios_tecnologicos.png',
-    imageAlt: 'Soluciones tecnológicas',
-    href:     '/servicios/soluciones-tecnologicas',
-  },
-  {
-    icon:     Network,
-    category: 'Infraestructura TI',
-    title:    'Infraestructura y Servicios Digitales',
-    body:     'Arquitecturas tecnológicas robustas y escalables para operaciones críticas. Cloud, híbrido o on-premise, con alta disponibilidad garantizada.',
-    image:    '/images/services/infraestructura_y_servicios.png',
-    imageAlt: 'Infraestructura y servicios digitales',
-    href:     '/servicios/infraestructura',
-  },
-  {
-    icon:     Headset,
-    category: 'Asesoría Empresarial',
-    title:    'Consultoría y Soporte',
-    body:     'Acompañamiento estratégico, implementación técnica y soporte continuo para organizaciones en proceso de maduración digital.',
-    image:    '/images/services/consultoria_y_soporte.png',
-    imageAlt: 'Consultoría y soporte empresarial',
-    href:     '/servicios/consultoria',
+    icon:     Landmark,
+    category: 'Abastecimiento',
+    title:    'Licitaciones y Mercado Público',
+    body:     'Gestión de ofertas técnicas y económicas en ChileCompra. Documentación completa, seguimiento y cumplimiento normativo en cada proceso.',
+    image:    '/images/services/servicios_para_mercado_publico.png',
+    imageAlt: 'Licitaciones y mercado público',
+    href:     '/servicios/mercado-publico',
   },
   {
     icon:     Package,
     category: 'Abastecimiento',
-    title:    'Abastecimiento y Suministro',
-    body:     'Gestión integral del aprovisionamiento tecnológico: equipos, licencias y recursos digitales con cumplimiento normativo y eficiencia operativa.',
+    title:    'Importación y Comercio Exterior',
+    body:     'Gestión de importaciones a pedido: equipos, maquinarias e insumos. Coordinación con proveedores internacionales y trámites de internación.',
     image:    '/images/services/abastecimiento_y_suministro.png',
-    imageAlt: 'Abastecimiento y suministro',
+    imageAlt: 'Importación y comercio exterior',
     href:     '/servicios/abastecimiento',
   },
   {
-    icon:     Building2,
-    category: 'Sector Público',
-    title:    'Mercado Público y Licitaciones',
-    body:     'Participación en procesos de licitación pública con soluciones que cumplen los estándares de ChileCompra y los requerimientos del Estado.',
-    image:    '/images/services/servicios_para_mercado_publico.png',
-    imageAlt: 'Servicios para mercado público',
-    href:     '/servicios/mercado-publico',
+    icon:     Truck,
+    category: 'Logística',
+    title:    'Operaciones en Terreno',
+    body:     'Coordinación de despachos, transporte y entrega final con presencia física. Seguimiento de cada operación con trazabilidad completa.',
+    image:    '/images/services/infraestructura_y_servicios.png',
+    imageAlt: 'Operaciones en terreno',
+    href:     '/servicios/infraestructura',
+  },
+  {
+    icon:     Package,
+    category: 'Logística',
+    title:    'Gestión de Cadena de Suministro',
+    body:     'Planificación y coordinación de abastecimiento, proveedores y procesos logísticos orientados a continuidad operacional.',
+    image:    '/images/services/consultoria_y_soporte.png',
+    imageAlt: 'Gestión de cadena de suministro',
+    href:     '/servicios/consultoria',
+  },
+  {
+    icon:     Cpu,
+    category: 'Tecnología y Gestión',
+    title:    'Plataformas Digitales y Software',
+    body:     'Desarrollo de software empresarial a medida, aulas virtuales y sistemas SaaS. Arquitectura diseñada por Ingeniería Civil en Informática.',
+    image:    '/images/services/servicios_tecnologicos.png',
+    imageAlt: 'Plataformas digitales y software',
+    href:     '/servicios/soluciones-tecnologicas',
+  },
+  {
+    icon:     Headset,
+    category: 'Tecnología y Gestión',
+    title:    'Sistemas de Gestión y Seguridad',
+    body:     'Diseño de sistemas de gestión de calidad (ISO, NCh, Código ISM) y asesoría en seguridad organizacional para entornos regulados.',
+    image:    '/images/services/consultoria_y_soporte.png',
+    imageAlt: 'Sistemas de gestión y seguridad',
+    href:     '/servicios/consultoria',
   },
 ]
 
@@ -159,9 +168,9 @@ export function ServicesSection() {
         {/* Header + arrows */}
         <div className="flex items-end justify-between gap-6">
           <SectionHeader
-            overline="Nuestros Servicios"
-            title="Un portafolio diseñado para la empresa moderna"
-            description="Soluciones tecnológicas integrales para organizaciones que exigen confiabilidad, escalabilidad y cumplimiento normativo."
+            overline="Qué Ofrecemos"
+            title="Soluciones Estratégicas para tu Empresa"
+            description="Integramos abastecimiento, gestión operacional y transformación digital para impulsar operaciones eficientes y sostenibles."
             align="left"
             className="max-w-xl"
           />

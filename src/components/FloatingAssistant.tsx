@@ -2,96 +2,26 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
-import { MessageCircle, X, ArrowRight, Zap } from 'lucide-react'
+import { X } from 'lucide-react'
+import { ChatWindow } from './chat/ChatWindow'
+import { useMobileMenu } from '@/context/mobile-menu'
 
-/* ─── Quick actions ─────────────────────────────────────────────────────── */
-const QUICK_ACTIONS = [
-  { label: 'Solicitar una reunión', href: '/contacto' },
-  { label: 'Ver nuestros servicios', href: '/servicios' },
-  { label: 'Conocer proyectos',      href: '/proyectos' },
-]
-
-/* ─── Component ─────────────────────────────────────────────────────────── */
 export function FloatingAssistant() {
   const [open, setOpen] = useState(false)
+  const { mobileOpen } = useMobileMenu()
+
+  // Hide entirely when mobile nav drawer is open — avoids z-index conflict
+  if (mobileOpen) return null
 
   return (
     <div className="fixed bottom-6 right-5 z-50 flex flex-col items-end gap-3 sm:right-6">
 
-      {/* Popover panel */}
+      {/* Chat window */}
       <AnimatePresence>
-        {open && (
-          <motion.div
-            key="panel"
-            initial={{ opacity: 0, y: 14, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.97 }}
-            transition={{ duration: 0.22, ease: 'easeOut' }}
-            className="w-72 overflow-hidden border border-corporate-border bg-white shadow-xl"
-            style={{ borderRadius: '4px' }}
-          >
-            {/* Header */}
-            <div className="flex items-center gap-3 bg-electric px-5 py-4">
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/15">
-                <Zap size={14} className="text-white" fill="currentColor" />
-              </div>
-              <div className="flex flex-col gap-0.5">
-                <span className="text-[0.82rem] font-bold text-white leading-tight">Asistente VOGEL</span>
-                <span className="text-[0.68rem] text-white/65">Soporte y orientación digital</span>
-              </div>
-              <span className="ml-auto flex h-2 w-2 shrink-0 rounded-full bg-white/80">
-                <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-white/60 opacity-75" />
-              </span>
-            </div>
-
-            {/* Message */}
-            <div className="px-5 pt-4 pb-3">
-              <div className="rounded-[3px] bg-corporate-soft border border-corporate-border px-4 py-3">
-                <p className="text-[0.82rem] leading-relaxed text-corporate-body">
-                  ¡Hola! Soy el asistente de VOGEL. ¿En qué puedo ayudarle hoy?
-                </p>
-              </div>
-            </div>
-
-            {/* Quick actions */}
-            <div className="flex flex-col gap-1 px-5 pb-5">
-              <p className="mb-2 text-[0.68rem] font-semibold uppercase tracking-wide text-corporate-light">
-                Acciones rápidas
-              </p>
-              {QUICK_ACTIONS.map(({ label, href }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  onClick={() => setOpen(false)}
-                  className="group flex items-center justify-between rounded-[3px] border border-corporate-border bg-white px-3.5 py-2.5 text-[0.8rem] text-corporate-body transition-all duration-200 hover:border-electric/35 hover:bg-electric-light hover:text-electric"
-                >
-                  <span>{label}</span>
-                  <ArrowRight
-                    size={12}
-                    className="text-corporate-light transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-electric"
-                  />
-                </Link>
-              ))}
-            </div>
-
-            {/* Footer */}
-            <div className="border-t border-corporate-border px-5 py-3">
-              <a
-                href={`https://wa.me/56900000000?text=${encodeURIComponent('Hola, me gustaría obtener información sobre los servicios de VOGEL.')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 text-[0.78rem] font-semibold text-electric hover:text-electric-hover transition-colors duration-200"
-              >
-                <MessageCircle size={13} />
-                Continuar por WhatsApp
-              </a>
-            </div>
-          </motion.div>
-        )}
+        {open && <ChatWindow />}
       </AnimatePresence>
 
-      {/* Toggle bubble */}
+      {/* Toggle bubble — corporate blue */}
       <motion.button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -100,11 +30,10 @@ export function FloatingAssistant() {
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.94 }}
         transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-        className="relative flex h-14 w-14 items-center justify-center rounded-full bg-electric shadow-blue text-white transition-shadow duration-300 hover:shadow-blue-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+        className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg text-white transition-shadow duration-300 hover:bg-[#1EBE5D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2"
       >
-        {/* Pulse ring — visible when closed */}
         {!open && (
-          <span className="absolute inset-0 rounded-full animate-ping bg-electric opacity-25" />
+          <span className="absolute inset-0 rounded-full animate-ping bg-[#25D366] opacity-20" />
         )}
 
         <AnimatePresence mode="wait" initial={false}>
@@ -112,8 +41,8 @@ export function FloatingAssistant() {
             <motion.span
               key="close"
               initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
+              animate={{ rotate: 0,  opacity: 1 }}
+              exit={{ rotate: 90,   opacity: 0 }}
               transition={{ duration: 0.15 }}
             >
               <X size={20} strokeWidth={2.5} />
@@ -122,11 +51,14 @@ export function FloatingAssistant() {
             <motion.span
               key="open"
               initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
+              animate={{ rotate: 0,  opacity: 1 }}
+              exit={{ rotate: -90,  opacity: 0 }}
               transition={{ duration: 0.15 }}
+              className="flex items-center justify-center"
             >
-              <MessageCircle size={20} strokeWidth={2} />
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
             </motion.span>
           )}
         </AnimatePresence>

@@ -9,7 +9,7 @@ import type { LucideIcon } from 'lucide-react'
 /* ─── Data ──────────────────────────────────────────────────────────────── */
 const METRICS = [
   { value: 'Desde',  accent: '2021',  label: 'soluciones integrales en el mercado chileno' },
-  { value: '+100',    accent: '',      label: 'proyectos desarrollados y en operación' },
+  { value: '+50',    accent: '',      label: 'proyectos desarrollados y en operación' },
   { value: '+30',      accent: '',      label: 'clientes activos, públicos y privados' },
   { value: '96%',    accent: '',      label: 'satisfacción en evaluaciones de clientes' },
 ]
@@ -25,26 +25,26 @@ const DIFFERENTIATORS: Differentiator[] = [
   {
     index: '01',
     icon:  ShieldCheck,
-    title: 'Cumplimiento normativo',
-    body:  'Soluciones alineadas con los estándares regulatorios del sector público y privado; incluyendo ChileCompra, Normas ISO y Normas Nch.',
+    title: 'Formados donde el margen de error es cero',
+    body:  'Nuestra experiencia nace en entornos operacionales de alta exigencia, donde la precisión, la disciplina y la capacidad de respuesta no son opcionales.',
   },
   {
     index: '02',
     icon:  Clock,
-    title: 'Soporte personalizado',
-    body:  'Atención directa y tiempos de respuesta comprometidos para operaciones críticas. Sin call centers, sin intermediarios.',
+    title: 'Procesos diseñados para el sector público',
+    body:  'Entendemos cómo funcionan las instituciones chilenas y adaptamos nuestros procesos para cumplir estándares administrativos, técnicos y operacionales.',
   },
   {
     index: '03',
     icon:  TrendingUp,
-    title: 'Tecnología que crece junto a su operación',
-    body:  'Nuestras soluciones están diseñadas para responder a las necesidades actuales y futuras de cada organización, entregando estabilidad, capacidad de expansión y continuidad operativa en entornos dinámicos.',
+    title: 'Sin intermediarios, sin excusas',
+    body:  'Operamos de forma directa, manteniendo control sobre cada etapa del servicio para garantizar trazabilidad, cumplimiento y capacidad de respuesta.',
   },
   {
     index: '04',
     icon:  Users,
-    title: 'Experiencia técnica aplicada a distintos sectores',
-    body:  'Integramos conocimientos en tecnología, operaciones, logística y transformación digital para entregar soluciones adaptadas a las necesidades reales de cada organización.',
+    title: 'Empresa de origen familiar, con proyección institucional',
+    body:  'Construimos relaciones de largo plazo basadas en confianza, compromiso y una visión moderna de crecimiento empresarial.',
   },
 ]
 
@@ -103,10 +103,7 @@ export function CapabilitiesSection() {
               VOGEL CHILE
             </h2>
             <p className="text-[1rem] leading-relaxed text-corporate-subtle">
-              Somos una empresa que entrega soluciones orientadas a tecnología, infraestructura digital, soporte empresarial y suministro de productos y servicios para el sector privado y organismos públicos.
-            </p>
-            <p className="text-[1rem] leading-relaxed text-corporate-subtle">
-              Trabajamos con una visión moderna, profesional y orientada a la mejora continua, desarrollando soluciones confiables, escalables y adaptadas a las necesidades reales de cada cliente.
+              Una empresa preparada para operar donde la exigencia es la norma.
             </p>
           </motion.div>
 

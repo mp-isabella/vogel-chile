@@ -10,14 +10,13 @@ export const NAV_ITEMS: NavItem[] = [
     label: 'Servicios',
     href: '/servicios',
     children: [
-      { label: 'Soluciones Tecnológicas',       href: '/servicios/soluciones-tecnologicas' },
-      { label: 'Infraestructura Digital',        href: '/servicios/infraestructura' },
-      { label: 'Consultoría y Soporte',          href: '/servicios/consultoria' },
-      { label: 'Abastecimiento y Suministro',    href: '/servicios/abastecimiento' },
-      { label: 'Mercado Público y Licitaciones', href: '/servicios/mercado-publico' },
+      { label: 'Abastecimiento y Suministro',        href: '/servicios/abastecimiento' },
+      { label: 'Logística y Operaciones',             href: '/servicios/infraestructura' },
+      { label: 'Tecnología e Infraestructura Digital', href: '/servicios/soluciones-tecnologicas' },
+      { label: 'Consultoría y Gestión',               href: '/servicios/consultoria' },
+      { label: 'Mercado Público',                     href: '/servicios/mercado-publico' },
     ],
   },
   { label: 'Proyectos', href: '/proyectos' },
-  { label: 'Nosotros',  href: '/nosotros' },
-  { label: 'Blog',        href: '/blog' },
+  { label: 'Nosotros',  href: '/nosotros' }
 ]

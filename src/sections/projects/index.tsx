@@ -13,23 +13,13 @@ import { SectionHeader } from '@/components/ui/SectionHeader'
 const PROJECTS = [
   {
     id:          'impulsaq',
-    category:    'Plataforma SaaS',
+    category:    'Gestión OTEC',
     name:        'ImpulsaQ',
-    description: 'Plataforma integral para pymes chilenas que centraliza operaciones, inventario y facturación con integración SII nativa.',
-    image:       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-    imageAlt:    'Dashboard de gestión empresarial',
-    tags:        ['SaaS', 'ERP', 'DTE'],
+    description: 'Sistema de gestión OTEC en la nube, desarrollado bajo NCh 2728 e ISO 9001, con integración SENCE y cumplimiento de la Ley de Protección de Datos Personales.',
+    image:       '/images/projects/impulsaq.png',
+    imageAlt:    'Dashboard de gestión OTEC ImpulsaQ',
+    tags:        ['GESTIÓN OTEC', 'NCh 2728', 'SENCE', 'ISO 9001'],
     href:        '/proyectos/impulsaq',
-  },
-  {
-    id:          'gestion-empresarial',
-    category:    'Software Empresarial',
-    name:        'Sistema de Gestión Empresarial',
-    description: 'Plataforma modular con RRHH, finanzas y cadena de suministro. Reportería avanzada en tiempo real.',
-    image:       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-    imageAlt:    'Analítica empresarial',
-    tags:        ['ERP', 'BI', 'Workflows'],
-    href:        '/proyectos/gestion-empresarial',
   },
 ]
 

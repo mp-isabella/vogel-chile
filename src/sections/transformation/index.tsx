@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Server, Cloud, Lock, RefreshCw, Database, Cpu } from 'lucide-react'
+import { Landmark, Globe, HardHat, Boxes, MonitorSmartphone, ShieldCheck } from 'lucide-react'
 import { staggerSlow, fadeUp, inView } from '@/lib/motion'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { cn } from '@/lib/utils'
@@ -15,40 +15,40 @@ const AREAS: {
   tags:      readonly string[]
 }[] = [
   {
-    icon:  Server,
-    title: 'Infraestructura On-Premise',
-    body:  'Diseño, implementación y gestión de data centers y rack rooms. Networking, cableado estructurado y alta disponibilidad para operaciones críticas.',
-    tags:  ['Servers', 'Networking', 'DC'],
+    icon:  Landmark,
+    title: 'Licitaciones y Mercado Público',
+    body:  'Gestión de ofertas técnicas y económicas en ChileCompra. Documentación completa, seguimiento y cumplimiento normativo en cada proceso.',
+    tags:  ['Abastecimiento'],
   },
   {
-    icon:  Cloud,
-    title: 'Cloud & Arquitecturas Híbridas',
-    body:  'Migración y operación en AWS, Azure y GCP. Diseño de arquitecturas multi-cloud que combinan lo mejor de cada entorno con control total.',
-    tags:  ['AWS', 'Azure', 'GCP'],
+    icon:  Globe,
+    title: 'Importación y Comercio Exterior',
+    body:  'Gestión de importaciones a pedido: equipos, maquinarias e insumos. Coordinación con proveedores internacionales y trámites de internación.',
+    tags:  ['Abastecimiento'],
   },
   {
-    icon:  Lock,
-    title: 'Ciberseguridad Empresarial',
-    body:  'Auditorías de seguridad, firewall de próxima generación, segmentación de red y políticas de acceso alineadas con marcos normativos.',
-    tags:  ['NGFW', 'ZeroTrust', 'ISO 27001'],
+    icon:  HardHat,
+    title: 'Operaciones en Terreno',
+    body:  'Coordinación de despachos, transporte y entrega final con presencia física. Seguimiento de cada operación con trazabilidad completa.',
+    tags:  ['Logística'],
   },
   {
-    icon:  RefreshCw,
-    title: 'Continuidad y Recuperación',
-    body:  'Planes de recuperación ante desastres, backup automatizado y failover. SLA garantizado para infraestructura de misión crítica.',
-    tags:  ['DR', 'Backup', 'HA'],
+    icon:  Boxes,
+    title: 'Gestión de Cadena de Suministro',
+    body:  'Evaluación y coordinación de proveedores. Gestión de inventarios, despachos y logística de proyectos adjudicados.',
+    tags:  ['Logística'],
   },
   {
-    icon:  Database,
-    title: 'Datos e Integración',
-    body:  'Arquitectura de bases de datos, pipelines ETL e integración con ERP y CRM. Cumplimiento normativo en el tratamiento de datos sensibles.',
-    tags:  ['SQL', 'ETL', 'ERP', 'APIs'],
+    icon:  MonitorSmartphone,
+    title: 'Plataformas Digitales y Software',
+    body:  'Desarrollo de software empresarial a medida, aulas virtuales y sistemas SaaS. Arquitectura diseñada por Ingeniería Civil en Informática.',
+    tags:  ['Tecnología y Gestión'],
   },
   {
-    icon:  Cpu,
-    title: 'Automatización y DevOps',
-    body:  'Pipelines CI/CD, contenedores y orquestación. Reducción del tiempo de despliegue y mejora medible en la calidad del software.',
-    tags:  ['Docker', 'K8s', 'CI/CD'],
+    icon:  ShieldCheck,
+    title: 'Sistemas de Gestión y Seguridad',
+    body:  'Diseño de sistemas de gestión de calidad (ISO, NCh, Código ISM) y asesoría en seguridad organizacional para entornos regulados.',
+    tags:  ['Tecnología y Gestión'],
   },
 ]
 
@@ -145,9 +145,9 @@ export function TransformationSection() {
       <div className="container-vogel flex flex-col gap-10">
 
         <SectionHeader
-          overline="Capacidades Técnicas"
-          title="Infraestructura y tecnología de clase empresarial"
-          description="Un conjunto completo de disciplinas de ingeniería para diseñar, implementar y operar la infraestructura digital de organizaciones exigentes."
+          overline="Nuestra Experiencia"
+          title="Capacidades Operacionales"
+          description="Servicios estructurados para operar con precisión, cumplimiento y capacidad de respuesta."
           align="center"
           maxWidth="max-w-2xl"
         />

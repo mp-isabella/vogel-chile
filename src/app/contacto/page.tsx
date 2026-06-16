@@ -3,7 +3,7 @@ import { ContactContent } from '@/sections/contacto/ContactContent'
 
 export const metadata = {
   title: 'Contacto — VOGEL',
-  description: 'Hable con nuestro equipo sobre su proyecto tecnológico. Infraestructura, software, consultoría y abastecimiento para empresas e instituciones.',
+  description: 'Coordinamos soluciones en abastecimiento, logística y tecnología para instituciones públicas y empresas privadas.',
 }
 
 export default function ContactoPage() {

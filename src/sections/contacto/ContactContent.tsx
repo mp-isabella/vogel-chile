@@ -10,10 +10,10 @@ import { fadeUp, fadeRight, inView, staggerSlow } from '@/lib/motion'
 type FormState = 'idle' | 'submitting' | 'success'
 
 const INTERESTS = [
-  'Soluciones Tecnológicas',
-  'Infraestructura Digital',
+  'Abastecimiento y Suministro',
+  'Logística y Operaciones',
+  'Tecnología y Gestión Digital',
   'Consultoría y Soporte',
-  'Abastecimiento',
   'Mercado Público',
   'Otro',
 ]
@@ -27,12 +27,12 @@ function ContactInfo() {
       className="flex flex-col gap-8"
     >
       <motion.div variants={fadeUp} className="flex flex-col gap-3">
-        <span className="text-overline">Contáctenos</span>
+        <span className="text-overline">Conversemos</span>
         <h1 className="text-headline text-vogel-950">
-          Hablemos sobre su proyecto
+          Impulsamos crecimiento
         </h1>
         <p className="text-[0.96rem] leading-relaxed text-corporate-subtle max-w-[360px]">
-          Nuestro equipo responde en menos de 24 horas hábiles. Cuéntenos su desafío y diseñaremos una solución a medida.
+          Coordinamos soluciones en abastecimiento, logística y tecnología para instituciones públicas y empresas privadas.
         </p>
       </motion.div>
 
@@ -61,7 +61,7 @@ function ContactInfo() {
             </div>
             <div className="flex flex-col gap-0.5">
               <span className="text-[0.68rem] font-semibold uppercase tracking-wide text-corporate-light">Teléfono</span>
-              <span className="text-[0.9rem] font-medium">+56 (2) 0000 0000</span>
+              <span className="text-[0.9rem] font-medium">+56 9 7723 8960</span>
             </div>
           </a>
 
@@ -71,7 +71,7 @@ function ContactInfo() {
             </div>
             <div className="flex flex-col gap-0.5">
               <span className="text-[0.68rem] font-semibold uppercase tracking-wide text-corporate-light">Dirección</span>
-              <span className="text-[0.9rem] font-medium">Chillán, Chile</span>
+              <span className="text-[0.9rem] font-medium">El Roble 627, Segundo Piso, Oficina 3, Chillán, Chile.</span>
             </div>
           </div>
 
@@ -81,7 +81,7 @@ function ContactInfo() {
             </div>
             <div className="flex flex-col gap-0.5">
               <span className="text-[0.68rem] font-semibold uppercase tracking-wide text-corporate-light">Horario</span>
-              <span className="text-[0.9rem] font-medium">Lun – Vie, 09:00 – 18:30</span>
+              <span className="text-[0.9rem] font-medium">Lun – Vie, 09:00 – 18:00</span>
             </div>
           </div>
         </address>
@@ -90,7 +90,7 @@ function ContactInfo() {
       {/* WhatsApp CTA */}
       <motion.div variants={fadeUp}>
         <a
-          href={`https://wa.me/56900000000?text=${encodeURIComponent('Hola, me gustaría obtener más información sobre los servicios de VOGEL.')}`}
+          href={`https://wa.me/56977238960?text=${encodeURIComponent('Hola VOGEL, los contacto desde su sitio web. Me gustaría obtener más información sobre sus servicios.')}`}
           target="_blank"
           rel="noopener noreferrer"
           className="group inline-flex items-center gap-2.5 rounded-card border border-corporate-border bg-white px-5 py-3.5 text-[0.88rem] font-semibold text-corporate-body shadow-sm transition-all duration-200 hover:border-electric/30 hover:shadow-md hover:text-electric"
@@ -104,9 +104,8 @@ function ContactInfo() {
       {/* Trust points */}
       <motion.div variants={fadeUp} className="flex flex-col gap-2 pt-2 border-t border-corporate-border">
         {[
-          'Respuesta en menos de 24 horas hábiles',
-          'Reunión sin costo ni compromiso',
-          'Confidencialidad garantizada',
+          'Para licitaciones, convenios y organismos públicos, coordinamos respuestas técnicas y administrativas según los requerimientos de cada institución.',
+          'Para empresas privadas, desarrollamos soluciones adaptadas a necesidades operacionales, tecnológicas y logísticas con foco en continuidad y capacidad de respuesta.',
         ].map((item) => (
           <div key={item} className="flex items-center gap-2 text-[0.8rem] text-corporate-subtle">
             <CheckCircle2 size={14} className="text-electric shrink-0" />
@@ -148,7 +147,7 @@ function ContactForm() {
           <div className="flex flex-col gap-2">
             <h3 className="text-title text-vogel-950">¡Mensaje enviado!</h3>
             <p className="text-[0.9rem] text-corporate-subtle max-w-[280px]">
-              Nuestro equipo revisará su solicitud y le contactará en las próximas 24 horas hábiles.
+              Hemos recibido su solicitud correctamente. Nuestro equipo la revisará y se pondrá en contacto con usted a la brevedad.
             </p>
           </div>
           <button
@@ -162,9 +161,9 @@ function ContactForm() {
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <div className="flex flex-col gap-1.5">
-            <h2 className="text-title text-vogel-950">Cuéntenos su proyecto</h2>
+            <h2 className="text-title text-vogel-950"> Cuéntenos su desafío</h2>
             <p className="text-[0.84rem] text-corporate-subtle">
-              Complete el formulario y nos pondremos en contacto a la brevedad.
+            Comparta sus requerimientos y nuestro equipo le ayudará a encontrar la solución más adecuada.
             </p>
           </div>
 
@@ -206,7 +205,7 @@ function ContactForm() {
                 id="email"
                 type="email"
                 required
-                placeholder="contacto@vogelchile.cl"
+                placeholder="correo@empresa.cl"
                 className="rounded-btn border border-corporate-border px-3.5 py-2.5 text-[0.88rem] text-corporate-body placeholder:text-corporate-light outline-none transition-[border-color,box-shadow] focus:border-electric focus:ring-2 focus:ring-electric/15"
               />
             </div>
@@ -217,7 +216,7 @@ function ContactForm() {
               <input
                 id="telefono"
                 type="tel"
-                placeholder="+56 9 0000 0000"
+                placeholder="+56977238960"
                 className="rounded-btn border border-corporate-border px-3.5 py-2.5 text-[0.88rem] text-corporate-body placeholder:text-corporate-light outline-none transition-[border-color,box-shadow] focus:border-electric focus:ring-2 focus:ring-electric/15"
               />
             </div>
@@ -255,9 +254,30 @@ function ContactForm() {
               id="mensaje"
               required
               rows={5}
-              placeholder="Descríbanos su proyecto o necesidad tecnológica..."
+              placeholder="Descríbanos su requerimiento operacional, logístico o tecnológico..."
               className="rounded-btn border border-corporate-border px-3.5 py-2.5 text-[0.88rem] text-corporate-body placeholder:text-corporate-light outline-none transition-[border-color,box-shadow] focus:border-electric focus:ring-2 focus:ring-electric/15 resize-none"
             />
+          </div>
+
+          {/* Informational guidance */}
+          <div className="rounded-btn border border-corporate-border bg-corporate-soft px-4 py-3.5 flex flex-col gap-3">
+            <p className="text-[0.76rem] font-semibold text-corporate-body">
+              ¿Su consulta corresponde a una licitación o a un proyecto privado?
+            </p>
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-0.5">
+                <span className="text-[0.71rem] font-semibold uppercase tracking-wide text-electric">Para licitaciones y sector público</span>
+                <p className="text-[0.76rem] leading-relaxed text-corporate-subtle">
+                  Indique en su mensaje el número ID de la licitación o el organismo contratante. Así podremos preparar una respuesta técnica más completa desde el primer contacto.
+                </p>
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <span className="text-[0.71rem] font-semibold uppercase tracking-wide text-electric">Para el sector privado</span>
+                <p className="text-[0.76rem] leading-relaxed text-corporate-subtle">
+                  Cuéntenos brevemente qué tipo de servicio necesita y en qué plazo. Evaluaremos sin costo la viabilidad de trabajar juntos.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Privacy */}

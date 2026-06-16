@@ -11,10 +11,10 @@ export default function ProyectosPage() {
   return (
     <MainLayout>
       <PageHero
-        overline="Proyectos"
+        overline="Casos de Éxito"
         title="Soluciones que generan resultados reales"
         description="Una muestra del trabajo que realizamos con empresas e instituciones."
-        image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80"
+        image="/images/projects/impulsaq.png"
         breadcrumbs={[{ label: 'Proyectos' }]}
         size="lg"
       />

@@ -320,3 +320,37 @@
     background-clip: text;
   }
 }
+
+/* ─── Content protection ────────────────────────────────────────────────── */
+
+/* Corporate sections: Hero, Services, Nosotros, Projects, Sector Público, etc. */
+section {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Re-enable selection for all interactive and form elements inside sections */
+section input,
+section textarea,
+section select,
+section button,
+section a,
+section label,
+section [contenteditable],
+section address {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* Footer copyright text */
+footer .border-t span {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Footer contact address stays fully selectable */
+footer address,
+footer address * {
+  user-select: text;
+  -webkit-user-select: text;
+}

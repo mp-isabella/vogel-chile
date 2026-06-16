@@ -11,10 +11,10 @@ export default function NosotrosPage() {
   return (
     <MainLayout>
       <PageHero
-        overline="Nosotros"
-        title="Construyendo la infraestructura digital de Chile"
-        description="Más de 5 años trabajando junto a empresas e instituciones para hacer que la tecnología sea un activo estratégico y no un obstáculo operativo."
-        image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80"
+        overline="Nuestra Trayectoria"
+        title="¿Quiénes somos?"
+        description=""
+        image="/logos/perfil/team_vogel.png"
         breadcrumbs={[{ label: 'Nosotros' }]}
         size="lg"
       />

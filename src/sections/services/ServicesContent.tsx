@@ -3,72 +3,108 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Cpu, Network, Headset, Package, Building2 } from 'lucide-react'
+import { ArrowRight, Cpu, Network, Headset, Package, Landmark } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { fadeUp, fadeLeft, fadeRight, inView, staggerSlow } from '@/lib/motion'
 
 /* ─── Data ──────────────────────────────────────────────────────────────── */
 const SERVICES = [
   {
-    icon:       Cpu,
-    overline:   'Software & Plataformas',
-    title:      'Soluciones Tecnológicas',
-    body:       'Desarrollamos plataformas digitales a medida que se adaptan a los procesos únicos de su organización. Desde sistemas de gestión hasta portales corporativos, cada solución incluye integración nativa con sus sistemas existentes, garantizando continuidad operativa y adopción efectiva.',
-    features:   ['Desarrollo de software a medida', 'Integración con ERP y CRM', 'Portales y plataformas web', 'Aplicaciones móviles empresariales'],
-    image:      '/images/services/servicios_tecnologicos.png',
-    imageAlt:   'Soluciones tecnológicas',
-    href:       '/contacto',
+    icon:       Package,
+    overline:   'Abastecimiento y Suministro',
+    title:      'Lo que su organización necesita, cuando lo necesita',
+    body:       'Gestionamos el aprovisionamiento integral de bienes, equipos e insumos para el sector público y privado. Participamos en procesos de licitación pública a través de ChileCompra y atendemos requerimientos directos del sector privado con trazabilidad completa.\n\nNuestro servicio cubre desde la identificación y evaluación de proveedores hasta la coordinación de la entrega final, con documentación completa del proceso.',
+    features:   [
+      'Compras corporativas y abastecimiento estratégico para organizaciones',
+      'Participación en licitaciones de suministro en Mercado Público (ChileCompra)',
+      'Importación de equipos, maquinarias e insumos a pedido',
+      'Gestión y evaluación de proveedores nacionales e internacionales',
+      'Documentación y cumplimiento normativo en compras públicas',
+    ],
+    image:      '/images/services/abastecimiento_y_suministro.png',
+    imageAlt:   'Abastecimiento y suministro',
+    href:       '/servicios/abastecimiento',
+    cta:        'Más Información',
     imageRight: false,
   },
   {
     icon:       Network,
-    overline:   'Infraestructura TI',
-    title:      'Infraestructura y Servicios Digitales',
-    body:       'Diseñamos arquitecturas tecnológicas robustas y escalables para operaciones críticas. Ya sea cloud, híbrido u on-premise, garantizamos alta disponibilidad y continuidad operativa con soporte especializado 24/7.',
-    features:   ['Cloud y arquitecturas híbridas', 'Data centers y networking', 'Alta disponibilidad y redundancia', 'Monitoreo y soporte continuo'],
+    overline:   'Logística y Operaciones',
+    title:      'Ejecutamos donde otros planifican',
+    body:       'Coordinación de transporte, despachos y operaciones logísticas con presencia física en terreno. Nuestro equipo operacional gestiona directamente la cadena de entrega, el seguimiento de envíos y la relación presencial con clientes, proveedores e instituciones.\n\nEl estándar operacional de VOGEL proviene de quien gestiona logística en aguas antárticas: el entorno más exigente del mundo. Ese rigor define cómo ejecutamos cada operación, sin importar su escala.',
+    features:   [
+      'Transporte y distribución de carga nacional',
+      'Coordinación de despachos y seguimiento en terreno',
+      'Logística de suministros para proyectos y licitaciones adjudicadas',
+      'Coordinación con proveedores de transporte especializados',
+      'Gestión de documentación de transporte y entrega',
+    ],
     image:      '/images/services/infraestructura_y_servicios.png',
-    imageAlt:   'Infraestructura y servicios digitales',
-    href:       '/contacto',
+    imageAlt:   'Logística y operaciones',
+    href:       '/servicios/infraestructura',
+    cta:        'Más Información',
     imageRight: true,
   },
   {
-    icon:       Headset,
-    overline:   'Asesoría Empresarial',
-    title:      'Consultoría y Soporte',
-    body:       'Acompañamos a las organizaciones en cada etapa de su transformación digital. Desde la definición del roadmap tecnológico hasta la implementación técnica y la capacitación de equipos, con soporte continuo y SLA garantizado.',
-    features:   ['Consultoría estratégica TI', 'Roadmap de transformación digital', 'Gestión del cambio y capacitación', 'Soporte técnico con SLA'],
-    image:      '/images/services/consultoria_y_soporte.png',
-    imageAlt:   'Consultoría y soporte empresarial',
-    href:       '/contacto',
+    icon:       Cpu,
+    overline:   'Tecnología e Infraestructura Digital',
+    title:      'Sistemas que funcionan cuando más los necesita',
+    body:       'Desarrollo de plataformas digitales a medida, consultoría en infraestructura TI y diseño de sistemas de gestión.\n\nNuestros proyectos tecnológicos son liderados por Ingeniería Civil en Informática con especialización en arquitectura empresarial.\n\nConstruimos tecnología que se integra a los procesos reales de cada organización, no soluciones genéricas que requieren adaptar la organización al software.',
+    features:   [
+      'Desarrollo de plataformas y aplicaciones empresariales a medida',
+      'Infraestructura cloud, on-premise e híbrida',
+      'Aulas virtuales y plataformas de capacitación en línea',
+      'Sistemas de gestión en la nube para instituciones de capacitación',
+      'Soporte técnico y mantención de sistemas en producción',
+    ],
+    image:      '/images/services/servicios_tecnologicos.png',
+    imageAlt:   'Tecnología e infraestructura digital',
+    href:       '/servicios/soluciones-tecnologicas',
+    cta:        'Más Información',
     imageRight: false,
   },
   {
-    icon:       Package,
-    overline:   'Abastecimiento',
-    title:      'Abastecimiento y Suministro',
-    body:       'Gestionamos el aprovisionamiento tecnológico de su organización de forma integral: equipos, licencias y recursos digitales con cumplimiento normativo, optimización de costos y eficiencia operativa.',
-    features:   ['Equipos tecnológicos certificados', 'Licenciamiento corporativo', 'Gestión de activos digitales', 'Cumplimiento normativo'],
-    image:      '/images/services/abastecimiento_y_suministro.png',
-    imageAlt:   'Abastecimiento y suministro tecnológico',
-    href:       '/contacto',
+    icon:       Headset,
+    overline:   'Consultoría y Sistemas de Gestión',
+    title:      'Procesos que se sostienen en el tiempo',
+    body:       'Diseño e implementación de sistemas de gestión basados en estándares nacionales e internacionales.\n\nApoyamos a organizaciones en la estructuración de sus procesos internos, cumplimiento normativo y preparación para procesos de certificación.\n\nCon formación específica en normativa ISO, NCh y estándares del sector marítimo (Código ISM), entregamos soluciones aplicadas a la realidad operacional de cada organización.',
+    features:   [
+      'Diseño de Sistemas de Gestión de Calidad (ISO 9001 / NCh 2728)',
+      'Consultoría para certificación OTEC ante SENCE',
+      'Sistemas de gestión bajo Código ISM para el sector marítimo y naviero',
+      'Diagnóstico y mapeo de procesos organizacionales',
+      'Asesoría en cumplimiento normativo sectorial público y privado',
+    ],
+    image:      '/images/services/consultoria_y_soporte.png',
+    imageAlt:   'Consultoría y sistemas de gestión',
+    href:       '/servicios/consultoria',
+    cta:        'Más Información',
     imageRight: true,
   },
   {
-    icon:       Building2,
-    overline:   'Sector Público',
-    title:      'Mercado Público y Licitaciones',
-    body:       'Participamos activamente en procesos de licitación pública con soluciones que cumplen los estándares de ChileCompra y los requerimientos del Estado. Asesoría completa para proveedores y organismos públicos.',
-    features:   ['Postulación a licitaciones ChileCompra', 'Gestión documental normativa', 'Cumplimiento Ley 19.886', 'Asesoría en contratos públicos'],
+    icon:       Landmark,
+    overline:   'Mercado Público',
+    title:      'Conocemos las reglas del sistema porque operamos en él',
+    body:       'Participación activa en procesos de compra pública a través de ChileCompra, con oferta en múltiples rubros y categorías.\n\nNuestros procesos están diseñados para cumplir con los requisitos formales, plazos y estándares de calidad que el Estado chileno exige.\n\nEntendemos el sistema de compras públicas no como un trámite, sino como una relación de largo plazo con las instituciones del Estado. La transparencia y el cumplimiento documental son parte de nuestro ADN operacional.',
+    features:   [
+      'Participación en procesos de licitación pública',
+      'Gestión documental de ofertas y postulaciones',
+      'Seguimiento de licitaciones adjudicadas',
+      'Cumplimiento normativo y administrativo',
+      'Relación operativa con organismos públicos',
+      'Gestión de oportunidades en ChileCompra',
+    ],
     image:      '/images/services/servicios_para_mercado_publico.png',
-    imageAlt:   'Servicios para mercado público',
-    href:       '/contacto',
+    imageAlt:   'Mercado público y licitaciones',
+    href:       '/servicios/mercado-publico',
+    cta:        'Ver Mercado Público',
     imageRight: false,
   },
 ] as const
 
 /* ─── Service block ─────────────────────────────────────────────────────── */
 function ServiceBlock({
-  icon: Icon, overline, title, body, features, image, imageAlt, href, imageRight,
+  icon: Icon, overline, title, body, features, image, imageAlt, href, cta, imageRight,
 }: (typeof SERVICES)[number]) {
   return (
     <div className={cn(
@@ -87,7 +123,11 @@ function ServiceBlock({
           </div>
           <span className="text-overline">{overline}</span>
           <h2 className="text-title text-vogel-950">{title}</h2>
-          <p className="text-[0.93rem] leading-relaxed text-corporate-subtle">{body}</p>
+          <div className="flex flex-col gap-3">
+            {body.split('\n\n').map((paragraph, i) => (
+              <p key={i} className="text-[0.93rem] leading-relaxed text-corporate-subtle">{paragraph}</p>
+            ))}
+          </div>
         </div>
 
         {/* Feature list */}
@@ -104,7 +144,7 @@ function ServiceBlock({
           href={href}
           className="btn-outline-electric w-fit"
         >
-          Solicitar información
+          {cta}
           <ArrowRight size={13} />
         </Link>
       </motion.div>

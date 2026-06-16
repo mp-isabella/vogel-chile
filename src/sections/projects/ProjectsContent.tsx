@@ -24,22 +24,12 @@ const PROJECTS: {
   {
     id:          'impulsaq',
     category:    'Software',
-    name:        'ImpulsaQ — Plataforma de Gestión',
-    description: 'Plataforma integral para pymes chilenas con gestión de inventario, ventas, DTE e integración SII. Más de 200 empresas activas en la plataforma.',
-    image:       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80',
-    imageAlt:    'Dashboard de gestión empresarial',
-    tags:        ['SaaS', 'ERP', 'DTE', 'React', 'Node.js'],
+    name:        'ImpulsaQ',
+    description: 'Sistema de gestión OTEC en la nube, desarrollado bajo NCh 2728 e ISO 9001, con integración SENCE y cumplimiento de la Ley de Protección de Datos Personales.',
+    image:       '/images/projects/impulsaq.png',
+    imageAlt:    'Dashboard de gestión OTEC ImpulsaQ',
+    tags:        ['GESTIÓN OTEC', 'NCh 2728', 'SENCE', 'ISO 9001'],
     href:        '/proyectos/impulsaq',
-  },
-  {
-    id:          'gestion-empresarial',
-    category:    'Software',
-    name:        'Sistema de Gestión Empresarial',
-    description: 'Plataforma modular con módulos de RRHH, finanzas y cadena de suministro para empresa con 500+ empleados. Integración nativa con ERP existente y reportería en tiempo real.',
-    image:       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80',
-    imageAlt:    'Analítica empresarial',
-    tags:        ['ERP', 'RRHH', 'Finanzas', 'Workflows'],
-    href:        '/proyectos/gestion-empresarial',
   },
 ]
 

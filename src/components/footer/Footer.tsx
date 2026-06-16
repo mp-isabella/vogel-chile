@@ -77,7 +77,7 @@ export function Footer() {
             </Link>
 
             <p className="max-w-[270px] text-[0.84rem] leading-relaxed text-corporate-subtle">
-              Soluciones tecnológicas e infraestructura digital para empresas e instituciones que operan con exigencia.
+              Abastecimiento, logística y tecnología para instituciones y empresas.
             </p>
 
             {/* Contact */}
@@ -94,11 +94,11 @@ export function Footer() {
                 className="flex items-center gap-2 text-[0.83rem] text-corporate-subtle transition-colors duration-200 hover:text-electric w-fit"
               >
                 <Phone size={13} className="shrink-0 text-electric" aria-hidden />
-                +56 (2) 0000 0000
+                +56 9 7723 8960
               </a>
               <span className="flex items-center gap-2 text-[0.83rem] text-corporate-subtle">
                 <MapPin size={13} className="shrink-0 text-electric" aria-hidden />
-                Calle el Roble 627, Chillán, Chile
+                El Roble 627, Segundo Piso, Oficina 3, Chillán, Chile.
               </span>
             </address>
 
@@ -109,6 +109,8 @@ export function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-8 w-8 items-center justify-center border border-corporate-border bg-white text-corporate-subtle transition-all duration-200 hover:border-electric/35 hover:text-electric hover:shadow-sm"
                   style={{ borderRadius: '2px' }}
                 >
@@ -146,11 +148,13 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-corporate-border">
         <div className="container-vogel flex flex-col items-center justify-between gap-2 py-5 text-[0.76rem] text-corporate-light sm:flex-row">
-          <span>© {new Date().getFullYear()} VOGEL. Todos los derechos reservados.</span>
+          <span>© 2026 VOGEL CHILE SpA. Todos los derechos reservados.</span>
+          {/* 
           <nav className="flex items-center gap-4" aria-label="Footer legal">
             <Link href="/privacidad" className="hover:text-electric transition-colors duration-200">Privacidad</Link>
             <Link href="/terminos"   className="hover:text-electric transition-colors duration-200">Términos</Link>
           </nav>
+          */} 
         </div>
       </div>
 

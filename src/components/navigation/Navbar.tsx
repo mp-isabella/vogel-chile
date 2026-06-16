@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown, Phone, ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useScrolled } from '@/hooks/useScrolled'
 import { NAV_ITEMS } from '@/constants/navigation'
+import { useMobileMenu } from '@/context/mobile-menu'
 
 /* ─── Logo ──────────────────────────────────────────────────────────────── */
 function Logo({ solid }: { solid: boolean }) {
@@ -83,9 +84,9 @@ function LogoCompact() {
 export function Navbar({ forceSolid }: { forceSolid?: boolean }) {
   const scrolled = useScrolled(36)
   const solid = forceSolid || scrolled
-  const [mobileOpen, setMobileOpen]     = useState(false)
+  const { mobileOpen, toggleMenu, closeMenu } = useMobileMenu()
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-  const closeMobile = useCallback(() => setMobileOpen(false), [])
+  const closeMobile = useCallback(() => closeMenu(), [closeMenu])
 
   return (
     <>
@@ -189,7 +190,7 @@ export function Navbar({ forceSolid }: { forceSolid?: boolean }) {
               )}
             >
               <Phone size={12} strokeWidth={2} />
-              +56 (2) 0000 0000
+              +56 9 7723 8960
             </a>
 
             <div className={cn('h-4 w-px transition-colors duration-400', solid ? 'bg-corporate-border' : 'bg-white/18')} />
@@ -211,7 +212,7 @@ export function Navbar({ forceSolid }: { forceSolid?: boolean }) {
           {/* Mobile burger */}
           <button
             type="button"
-            onClick={() => setMobileOpen((v) => !v)}
+            onClick={toggleMenu}
             aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={mobileOpen}
             className={cn(
@@ -307,7 +308,7 @@ export function Navbar({ forceSolid }: { forceSolid?: boolean }) {
                   className="flex items-center justify-center gap-1.5 text-sm text-corporate-subtle hover:text-vogel-700 transition-colors py-1"
                 >
                   <Phone size={13} />
-                  +56 (2) 0000 0000
+                  +56 9 7723 8960
                 </a>
                 <Link href="/contacto" onClick={closeMobile} className="btn-primary w-full">
                   Contáctenos

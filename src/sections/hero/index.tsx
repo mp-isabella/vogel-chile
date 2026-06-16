@@ -15,7 +15,7 @@ const SLIDES = [
     priority: true,
   },
   {
-    src:      '/images/hero/portada.png',
+    src:      '/images/hero/portada_03.png',
     position: 'center 60%',
     priority: false,
   },
@@ -25,7 +25,7 @@ const SLIDES = [
     priority: false,
   },
   {
-    src:      '/images/hero/portada_03.png',
+    src:      '/images/hero/portada.png',
     position: 'center 45%',
     priority: false,
   },
@@ -132,9 +132,9 @@ export function HeroSection() {
         >
           {/* Headline */}
           <motion.h1 variants={item} className="text-display text-white">
-            Tecnología{' '}
-            <span className="gradient-text">que conecta</span>{' '}
-            empresas con el futuro
+            Operamos{' '}
+            <span className="gradient-text"> donde</span>{' '}
+            otros no llegan
           </motion.h1>
 
           {/* Body copy */}
@@ -142,17 +142,17 @@ export function HeroSection() {
             variants={item}
             className="text-[1rem] leading-[1.75] text-white/80 sm:text-[1.08rem] max-w-[540px]"
           >
-            Desarrollamos soluciones digitales, infraestructura tecnológica y servicios empresariales orientados a optimizar procesos, fortalecer operaciones y acompañar el crecimiento de empresas e instituciones.
+            Abastecimiento, logística y tecnología para el sector público y privado chileno. Con el estándar de quien opera en los entornos más exigentes del mundo.
           </motion.p>
 
           {/* CTAs */}
           <motion.div variants={item} className="flex flex-wrap items-center gap-3 pt-1">
-            <Link href="/servicios" className="btn-primary group">
-              Nuestros servicios
-              <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-[3px]" />
-            </Link>
             <Link href="/contacto" className="btn-outline-white">
-              Hablar con un experto
+              Solicita Información 
+            </Link>
+            <Link href="/servicios" className="btn-primary group">
+              Conocer nuestros servicios
+              <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-[3px]" />
             </Link>
           </motion.div>
         </motion.div>
@@ -167,10 +167,10 @@ export function HeroSection() {
       >
         <div className="container-vogel">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-            <StatItem value="Desde 2021" label="Soluciones integrales" />
-            <StatItem value="+100"        label="Proyectos desarrollados" />
-            <StatItem value="+30"          label="Clientes activos" />
-            <StatItem value="96%"        label="Satisfacción" />
+            <StatItem value="Desde 2021" label="Impulsando soluciones" />
+            <StatItem value="Innovación Continua"        label="Tecnología en evolución" />
+            <StatItem value="Soluciones Integrales"          label="Tecnologia, gestión y logística" />
+            <StatItem value="ChileCompra"        label="Registro activo" />
           </div>
         </div>
       </motion.div>
