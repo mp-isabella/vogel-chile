@@ -22,12 +22,15 @@ export async function POST(req: Request) {
       )
     }
 
-    console.log('SMTP_HOST:', process.env.SMTP_HOST)
-console.log('SMTP_PORT:', process.env.SMTP_PORT)
-console.log('SMTP_SECURE:', process.env.SMTP_SECURE)
-console.log('SMTP_USER:', process.env.SMTP_USER)
-console.log('SMTP_PASS_EXISTS:', !!process.env.SMTP_PASS)
-
+    console.log('[SMTP DEBUG]', {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      secure: process.env.SMTP_SECURE,
+      user: process.env.SMTP_USER,
+      passExists: !!process.env.SMTP_PASS,
+      contactEmail: process.env.CONTACT_EMAIL,
+    })
+    
     /* ── Transporter Zoho SMTP ────────────────────────────────────────── */
     const transporter = nodemailer.createTransport({
       host:   process.env.SMTP_HOST,
