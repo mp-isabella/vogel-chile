@@ -122,10 +122,31 @@ function ContactForm() {
   const [formState, setFormState] = useState<FormState>('idle')
   const [selectedInterest, setSelectedInterest] = useState<string>('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setFormState('submitting')
-    setTimeout(() => setFormState('success'), 1500)
+    const data = new FormData(e.currentTarget)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre:   data.get('nombre'),
+          empresa:  data.get('empresa'),
+          email:    data.get('email'),
+          telefono: data.get('telefono'),
+          interes:  selectedInterest,
+          mensaje:  data.get('mensaje'),
+        }),
+      })
+      if (res.ok) {
+        setFormState('success')
+      } else {
+        setFormState('idle')
+      }
+    } catch {
+      setFormState('idle')
+    }
   }
 
   return (
@@ -175,6 +196,7 @@ function ContactForm() {
               </label>
               <input
                 id="nombre"
+                name="nombre"
                 type="text"
                 required
                 placeholder="Juan Pérez"
@@ -187,6 +209,7 @@ function ContactForm() {
               </label>
               <input
                 id="empresa"
+                name="empresa"
                 type="text"
                 required
                 placeholder="Nombre de la empresa"
@@ -203,6 +226,7 @@ function ContactForm() {
               </label>
               <input
                 id="email"
+                name="email"
                 type="email"
                 required
                 placeholder="correo@empresa.cl"
@@ -215,6 +239,7 @@ function ContactForm() {
               </label>
               <input
                 id="telefono"
+                name="telefono"
                 type="tel"
                 placeholder="+56977238960"
                 className="rounded-btn border border-corporate-border px-3.5 py-2.5 text-[0.88rem] text-corporate-body placeholder:text-corporate-light outline-none transition-[border-color,box-shadow] focus:border-electric focus:ring-2 focus:ring-electric/15"
@@ -252,6 +277,7 @@ function ContactForm() {
             </label>
             <textarea
               id="mensaje"
+              name="mensaje"
               required
               rows={5}
               placeholder="Descríbanos su requerimiento operacional, logístico o tecnológico..."

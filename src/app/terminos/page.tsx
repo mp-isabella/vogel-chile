@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
 export const metadata = {
-  title: 'Términos y Condiciones — VOGEL',
+  title: 'Términos y Condiciones',
   description: 'Términos y Condiciones de uso del sitio web de VOGEL Chile SpA.',
 }
 

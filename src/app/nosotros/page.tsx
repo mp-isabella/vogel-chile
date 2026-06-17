@@ -3,7 +3,7 @@ import { PageHero } from '@/components/ui/PageHero'
 import { NosotrosContent } from '@/sections/nosotros/NosotrosContent'
 
 export const metadata = {
-  title: 'Nosotros — VOGEL',
+  title: 'Experiencia y Capacidades',
   description: 'Desde el 2021 entregando soluciones tecnológicas a empresas e instituciones en Chile. Conoce nuestra historia, misión y equipo.',
 }
 

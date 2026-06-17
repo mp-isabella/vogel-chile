@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 
 export const metadata = {
-  title: 'ImpulsaQ | Plataforma de Gestión OTEC en la Nube',
+  title: 'ImpulsaQ — Plataforma de Gestión OTEC en la Nube',
   description: 'Sistema de Gestión OTEC desarrollado para Impulsa Capacita SpA bajo estándares NCh 2728, ISO 9001 e integración SENCE.',
 }
 

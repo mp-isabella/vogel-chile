@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft, CheckCircle2, ArrowRight } from 'lucide-react'
 
 export const metadata = {
-  title: 'Abastecimiento y Suministro — VOGEL',
+  title: 'Abastecimiento y Suministro',
   description: 'Gestión integral del aprovisionamiento tecnológico: equipos, licencias y recursos digitales con cumplimiento normativo y eficiencia operativa.',
 }
 

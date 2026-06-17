@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default:  'VOGEL CHILE',
+    default:  'Soluciones Empresariales | VOGEL Chile',
     template: '%s | VOGEL',
   },
   description:

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft, CheckCircle2, ArrowRight } from 'lucide-react'
 
 export const metadata = {
-  title: 'Soluciones Tecnológicas — VOGEL',
+  title: 'Soluciones Tecnológicas e Innovación Digital',
   description: 'Plataformas digitales a medida diseñadas para adaptarse a los procesos únicos de su organización, con integración nativa a sistemas existentes.',
 }
 

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft, CheckCircle2, ArrowRight } from 'lucide-react'
 
 export const metadata = {
-  title: 'Mercado Público y Licitaciones — VOGEL',
+  title: 'Mercado Público y Licitaciones',
   description: 'Participación en procesos de licitación pública con soluciones que cumplen los estándares de ChileCompra y los requerimientos del Estado.',
 }
 

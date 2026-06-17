@@ -3,7 +3,7 @@ import { PageHero } from '@/components/ui/PageHero'
 import { SectorPublicoContent } from '@/sections/sector-publico/SectorPublicoContent'
 
 export const metadata = {
-  title: 'Sector Público — VOGEL',
+  title: 'Soluciones para el Sector Público',
   description: 'Participación activa en procesos de compra pública a través de ChileCompra. Licitaciones, cumplimiento normativo y relación institucional con el Estado chileno.',
 }
 

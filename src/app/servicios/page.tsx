@@ -3,7 +3,7 @@ import { PageHero } from '@/components/ui/PageHero'
 import { ServicesContent } from '@/sections/services/ServicesContent'
 
 export const metadata = {
-  title: 'Servicios — VOGEL',
+  title: 'Servicios para Organizaciones',
   description: 'VOGEL CHILE integra abastecimiento, logística y tecnología bajo un modelo operacional orientado a instituciones públicas y empresas privadas que requieren capacidad de respuesta, cumplimiento y trazabilidad.',
 }
 

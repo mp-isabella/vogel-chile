@@ -3,7 +3,7 @@ import { PageHero } from '@/components/ui/PageHero'
 import { ProjectsContent } from '@/sections/projects/ProjectsContent'
 
 export const metadata = {
-  title: 'Proyectos — VOGEL',
+  title: 'Proyectos y Casos de Éxito',
   description: 'Soluciones tecnológicas implementadas en empresas e instituciones a lo largo de Chile. Proyectos de infraestructura, software y transformación digital.',
 }
 

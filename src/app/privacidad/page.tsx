@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
 export const metadata = {
-  title: 'Política de Privacidad — VOGEL',
+  title: 'Política de Privacidad',
   description: 'Política de Privacidad de VOGEL Chile SpA. Información sobre el tratamiento de datos personales conforme a la Ley N°19.628 y la Ley N°21.719.',
 }
 

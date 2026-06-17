@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft, CheckCircle2, ArrowRight } from 'lucide-react'
 
 export const metadata = {
-  title: 'Infraestructura y Servicios Digitales — VOGEL',
+  title: 'Infraestructura y Servicios Digitales',
   description: 'Arquitecturas tecnológicas robustas y escalables para operaciones críticas. Cloud, híbrido o on-premise con alta disponibilidad garantizada.',
 }
 

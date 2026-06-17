@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
 export const metadata = {
-  title: 'Política de Cookies — VOGEL',
+  title: 'Política de Cookies',
   description: 'Política de Cookies del sitio web de VOGEL Chile SpA. Información sobre el uso de cookies y tecnologías de seguimiento.',
 }
 

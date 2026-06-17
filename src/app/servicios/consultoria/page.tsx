@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft, CheckCircle2, ArrowRight } from 'lucide-react'
 
 export const metadata = {
-  title: 'Consultoría y Soporte Empresarial — VOGEL',
+  title: 'Consultoría y Soporte Empresarial',
   description: 'Acompañamiento estratégico, implementación técnica y soporte continuo para organizaciones en proceso de maduración digital.',
 }
 
