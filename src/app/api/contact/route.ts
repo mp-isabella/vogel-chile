@@ -3,6 +3,12 @@ export const runtime = 'nodejs'
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
+console.log('[BOOT]', {
+  SMTP_HOST:     process.env.SMTP_HOST,
+  SMTP_USER:     process.env.SMTP_USER,
+  CONTACT_EMAIL: process.env.CONTACT_EMAIL,
+})
+
 export async function POST(req: Request) {
   try {
     const body = await req.json()
@@ -31,6 +37,15 @@ export async function POST(req: Request) {
       user: process.env.SMTP_USER,
       passExists: !!process.env.SMTP_PASS,
       contactEmail: process.env.CONTACT_EMAIL,
+    })
+
+    console.log('[ENV CHECK]', {
+      SMTP_HOST:       process.env.SMTP_HOST,
+      SMTP_PORT:       process.env.SMTP_PORT,
+      SMTP_SECURE:     process.env.SMTP_SECURE,
+      SMTP_USER:       process.env.SMTP_USER,
+      SMTP_PASS_EXISTS: !!process.env.SMTP_PASS,
+      CONTACT_EMAIL:   process.env.CONTACT_EMAIL,
     })
 
     /* ── Transporter Zoho SMTP ────────────────────────────────────────── */
