@@ -1,3 +1,5 @@
+export const runtime = 'nodejs'
+
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
@@ -30,7 +32,7 @@ export async function POST(req: Request) {
       passExists: !!process.env.SMTP_PASS,
       contactEmail: process.env.CONTACT_EMAIL,
     })
-    
+
     /* ── Transporter Zoho SMTP ────────────────────────────────────────── */
     const transporter = nodemailer.createTransport({
       host:   process.env.SMTP_HOST,
