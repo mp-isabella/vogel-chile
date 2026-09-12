@@ -15,6 +15,7 @@ export const FOOTER_GROUPS = [
       { label: 'Nosotros',      href: '/nosotros' },
       { label: 'Sector Público', href: '/sector-publico' },
       { label: 'Proyectos',     href: '/proyectos' },
+      { label: 'Blog',          href: '/blog' },
     ],
   },
   {
